@@ -26,11 +26,17 @@ module.exports = {
         loader: "source-map-loader"
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         use: [
           'file-loader',
         ],
       },
+      {
+        test: /\.svg$/,
+        use: [
+          '@svgr/webpack',
+        ],
+      }
     ]
   },
   externals: {
